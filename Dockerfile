@@ -4,13 +4,14 @@ MAINTAINER Ipman1971 <ipman1971@gmail.com>
 
 LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.name="scala-zulu" \
-      org.label-schema.description="Scala environtment" \
+      org.label-schema.description="Scala development environtment" \
       org.label-schema.vcs-url="https://github.com/ipman1971/scala-zulu" \
       org.label-schema.vendor="Ipman1971" \
       org.label-schema.version="1.0.0" \
       com.ipman1971.baseimage-contents='{"contents": [{"name": "maven", "version": "3.3.9"}, {"name": "scala", "version": "2.11.8"}, {"name": "sbt", "version": "1.1.15"}]}'
 
 ENV MAVEN_HOME /usr/share/maven
+ENV WORKSPACE /workspace
 
 RUN set -x && \
     apt-get -qq update && \
